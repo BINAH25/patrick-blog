@@ -26,7 +26,7 @@ SECRET_KEY = 'fogar(1asmj#i*^j0h3=yil7$0xxd8v16$5o_yyn04ble$85z('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["patricknurse.pythonanywhere.com"]
+ALLOWED_HOSTS = ["patricknurse.pythonanywhere.com",  "127.0.0.1"]
 
 
 # Application definition
