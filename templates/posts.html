@@ -3,6 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <style>
         * {
             box-sizing: border-box;
@@ -12,6 +13,9 @@
             font-family: Arial;
             padding: 20px;
             background: #f1f1f1;
+        }
+        h2{
+            color: #e8491d;
         }
 
         .header {
@@ -58,8 +62,8 @@
     <div class="row">
         <div class="leftcolumn">
             <div class="card">
-                <img src="{{post.image.url}}" alt="">
-                <h2>{{posts.title}}</h2>
+                <div class="post-image"><img src="{{post.image.url}}" class="img" alt=""></div>
+                <h1>{{posts.title}}</h1>
                 <h5>{{posts.created_at|date:"m, d, Y"}}</h5>
                 <p>{{posts.body}}</p>
             </div>

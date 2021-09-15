@@ -1,11 +1,14 @@
 from django.views.generic import TemplateView
 from .models import Message, Post
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.contrib import messages
+from django.shortcuts import render, redirect
+import datetime
 # Create your views here.
 
 def home(request):
     posts = Post.objects.all()
+   
     return render(request, 'index.html', {'posts': posts})
 
 class AboutPageView(TemplateView):
@@ -21,7 +24,9 @@ def send(request):
 
     user= Message.objects.create(email=email)
     user.save()
-    return HttpResponse('Subcription successful')
+    messages.add_message(request, messages.INFO, 'Subscription successful')
+    return redirect("blog:home")
+    
 
 
 def post(request, pk):
